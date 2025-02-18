@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from typing import Optional
-from pydantic import BaseModel
+from . import schema
 
 app = FastAPI(
     title="My API",
@@ -128,10 +128,6 @@ def post_comments(post_id: int):
         }
     }
 
-class Post(BaseModel):
-    title: str
-    body: Optional[str] = None
-    published : bool = False
 @app.post('/post')
-def post(post: Post):
+def post(post: schema.Post):
     return post
