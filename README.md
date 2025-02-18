@@ -4,7 +4,7 @@ Kede an South Sudanese social media platform.
 ```bash
 # first install fastapi and uvicorn
 
-pip3 install fastapi
+pip3 install fastapi uvicorn
 ```
 
 ```py
@@ -35,3 +35,7 @@ def about():
     }
 
 ```
+
+`@app.get('/')`:
+    path operation decorator <br>
+    `get` is the operation function/method with path as a string.
